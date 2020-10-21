@@ -33,6 +33,13 @@ resource "aws_subnet" "pri-subnet2" {
         availability_zone = "ap-northeast-2c"
 }
 
+resource "aws_subnet" "pri-subnet3" {
+        vpc_id = aws_vpc.terra.id
+        cidr_block = "10.0.5.0/24"
+        availability_zone = "ap-northeast-2c"
+}
+
+
 # Route Talbe
 resource "aws_route_table" "publicrt" {
         vpc_id = aws_vpc.terra.id
